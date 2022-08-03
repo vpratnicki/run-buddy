@@ -15,7 +15,8 @@
     font-family: Helvetica, Arial, sans-serif;
   }
   
-  /* apply styles to <header> */
+
+/* HEADER / NAV BAR STYLES START */
   header {
     padding: 20px 35px;
     background-color: var(--tertiary-color);
@@ -39,6 +40,7 @@
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+
   header a {
     text-decoration: none;
     color: var(--primary-color);
@@ -56,7 +58,6 @@
     list-style: none;
   }
 
-  
   header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
@@ -70,7 +71,11 @@
     border-radius: 15px;
     text-shadow: none;
   }
-  
+  /* HEADER / NAVBAR STYLES END */
+
+
+
+  /* FOOTER STYLES STARTS */
   footer {
     background: var(--primary-color);
     width: 100%;
@@ -94,12 +99,14 @@
   footer a {
     color: var(--secondary-color);
   }
-  
+  /* END FOOTER STYLES */
+
+  /* STYLE ALL SECTION TAGS */
   section {
     padding: 60px;
   }
   
-  /* Hero Style Start */
+  /* HERO STYLES START */
   .hero {
     background-image: url('../images/hero-bg.jpg');
     background-size: cover;
@@ -124,6 +131,7 @@
     font-style: italic;
     font-size: 55px;
     color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .hero-form {
@@ -137,10 +145,15 @@
     border-radius: 15px;
   }
   
+  .hero-form button:hover {
+    background-color: var(--tertiary-color);
+  }
+
   .hero-form h3 {
     font-size: 24px;
     margin: 0;
   }
+
   .hero-form p {
     margin: 5px 0 15px 0;
   }
@@ -156,23 +169,27 @@
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
   }
+
   .form-input:focus {
     background-color: rgba(255,255,255, 1);
     outline: none;
   }
 
-  .checkbox-wrapper input, .radio-wrapper input {
-    opacity: 0;
+  .hero-form label {
+    margin: 0 5px;
   }
 
-  .checkbox-wrapper input + label::after, 
-  .radio-wrapper input + label::after {
-    content: none;
+  .hero-form button {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
   }
-  
-  .checkbox-wrapper input:checked + label::after, 
-  .radio-wrapper input:checked + label::after {
-    content: "";
+
+  .checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
   }
 
   .checkbox-wrapper label, .radio-wrapper label {
@@ -208,7 +225,7 @@
     top: -3px;
     background-image: radial-gradient(circle, #39a6b2, #024e76);
   }
-  
+
   .checkbox-wrapper label::after {
     content: "";
     height: 6px;
@@ -221,88 +238,19 @@
     transform: rotate(-58deg);
   }
 
-  .hero-form label {
-    margin: 0 5px;
+  .checkbox-wrapper input + label::after, 
+  .radio-wrapper input + label::after {
+    content: none;
   }
   
-  .hero-form button {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
+  .checkbox-wrapper input:checked + label::after, 
+  .radio-wrapper input:checked + label::after {
+    content: "";
   }
-
-  .hero-form button:hover {
-    background-color: var(--tertiary-color);
-  }
-    /* Hero Style End */
+  /* HERO STYLES END */
 
   
-  .intro p {
-    line-height: 1.7;
-    color: var(--tertiary-color);
-    width: 80%;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .step {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 80%;
-    border-bottom: 1px solid var(--tertiary-color);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .step:last-child {
-    border-bottom: none;
-  }
-
-  .steps {
-    background: var(--primary-color);
-  }
-
-  .step-info {
-    flex: 2 70%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .step-img {
-    flex: 1 12%;
-    margin-right: 20px;
-  }
-  
-  .step-img img {
-    max-width: 100%;
-  }
-
-  .step h3 {
-    color: var(--secondary-color);
-    font-size: 46px;
-    flex: 1 30%;
-  }
-  .step-text {
-    flex: 12;
-  }
-
-  .step-text h4 {
-    font-size: 26px;
-    line-height: 1.5;
-    color: var(--secondary-color);
-  }
-
-  .step-text p {
-    color: var(--tertiary-color);
-    font-size: 18px;
-  }
-  
+  /* SECTION TITLE STYLES START */
   .section-title {
     font-size: 48px;
     color: var(--secondary-color);
@@ -320,7 +268,79 @@
   .secondary-border {
     border-color: var(--tertiary-color);
   }
+  /* SECTION TITLE STYLES END */
+
+  /* WHAT WE DO STYLES START*/
+  .intro p {
+    line-height: 1.7;
+    color: var(--tertiary-color);
+    width: 80%;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* WHAT WE DO STYLES END */
+
+
+  /* WHAT YOU DO STYLES START */
+  .steps {
+    background: var(--primary-color);
+  }
+
+  .step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid var(--tertiary-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .step h3 {
+    color: var(--secondary-color);
+    font-size: 46px;
+    flex: 1 30%;
+  }
+
+  .step-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .step-img {
+    flex: 1 12%;
+    margin-right: 20px;
+  }
   
+  .step-img img {
+    max-width: 100%;
+  }
+
+  .step-text {
+    flex: 12;
+  }
+
+  .step-text p {
+    color: var(--tertiary-color);
+    font-size: 18px;
+  }
+
+  .step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+  }
+  /* WHAT YOU DO STYLES END */
+
+  /* MEET THE TRAINERS START */
   .trainers {
     width: 100%;
     margin: 0 auto;
@@ -352,21 +372,21 @@
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
-    margin-bottom: 55px;
+    margin-bottom: 15px;
 }
 
 .trainer-bio p {
     font-size: 17px;
 }
+/* TRAINER STYLES END */
 
+/* REACH OUT STYLES START */
 .contact {
     background: var(--secondary-color);
-
 }
 
-.content-info > * {
-  flex: 1;
-  margin: 15px;
+.contact h2 {
+  color: var(--primary-color);
 }
 
 .contact-info {
@@ -375,8 +395,9 @@
   flex-wrap: wrap;
 }
 
-.contact h2 {
-    color: var(--primary-color);
+.content-info > * {
+  flex: 1;
+  margin: 15px;
 }
 
 .contact-info iframe {
@@ -398,10 +419,6 @@
     font-size: 16px;
     font-style: normal;
 }
-  
-.contact-info a {
-    color: var(--primary-color);
-}
 
 .contact-form input, .contact-form textarea {
   border: 1px solid var(--secondary-color);
@@ -415,6 +432,12 @@
   border-radius: 10px;
   background-color: rgba(255,255,255, 0.75);
 }
+  
+.contact-info a {
+    color: var(--primary-color);
+}
+
+
 
 .contact-form input:focus, .contact-form textarea:focus {
   background-color: rgba(255,255,255, 1);
